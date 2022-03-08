@@ -1,62 +1,33 @@
-// Challenge 1
-let paris = {
-  name: "Paris",
-  country: "France",
-  language: "French",
-  temperature: 18,
-  capitalCity: true
-};
-console.log(paris.temperature);
-
-// Challenge 2
-let sydney = {
-  name: "Sydney",
-  country: "France",
-  language: "English",
-  temperature: 25,
-  capitalCity: true
-};
-console.log(sydney.temperature);
-
-// Challenge 3
-let cities = [
-  { city: "Canberra" },
-  { city: "Melborn" },
-  { city: "Surfer's Paradise" }
-];
-console.log(cities[0]);
-console.log(cities[1]);
-console.log(cities[2]);
-
-//Proposed simpler solution by Matt for #3
-let australianCities = ["Canberra", "Melbourne", "Surfer's Paradise"];
-console.log(australianCities);
-
-// Challenge 4
-let weather = [
-  {
-    name: "Amsterdam",
-    country: "Netherlands",
-    language: "Dutch",
-    temperature: 2,
-    capitalCity: true
+let weather = {
+  paris: {
+    temp: 19.7,
+    humidity: 80
   },
-  {
-    name: "London",
-    country: "England",
-    language: "English",
-    temperature: 10,
-    capitalCity: true
+  tokyo: {
+    temp: 17.3,
+    humidity: 50
   },
-  {
-    name: "Barcelona",
-    country: "Spain",
-    language: "Spanish",
-    temperature: 20,
-    capitalCity: false
+  lisbon: {
+    temp: 30.2,
+    humidity: 20
+  },
+  "san francisco": {
+    temp: 20.9,
+    humidity: 100
+  },
+  moscow: {
+    temp: -5,
+    humidity: 20
   }
-];
+};
 
-console.log(weather[0].temperature);
-console.log(weather[1].temperature);
-console.log(weather[2].temperature);
+// write your code here
+
+let popUp = prompt("Please enter a city:");
+if (weather[popUp]) {
+  alert(`It is currently ${weather[popUp].temp} °C in ${popUp}`);
+} else {
+  alert(
+    "Sorry we don't know the weather for this city, try going to https://www.google.com/search?q=weather+"
+  );
+}
