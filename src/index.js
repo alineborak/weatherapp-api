@@ -25,7 +25,9 @@ let weather = {
 
 let popUp = prompt("Please enter a city:");
 if (weather[popUp]) {
-  alert(`It is currently ${weather[popUp].temp} °C in ${popUp}`);
+  alert(
+    `It is currently ${weather[popUp].temp} °C in ${popUp} with ${weather[popUp].humidity} of humidity`
+  );
 } else {
   alert(
     "Sorry we don't know the weather for this city, try going to https://www.google.com/search?q=weather+"
