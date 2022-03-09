@@ -24,6 +24,7 @@ let weather = {
 // write your code here
 
 let popUp = prompt("Please enter a city:");
+popUp = popUp.toLowerCase();
 if (weather[popUp]) {
   alert(
     `It is currently ${Math.round(weather[popUp].temp)} °C in ${popUp} with ${
