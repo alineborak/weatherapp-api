@@ -24,18 +24,22 @@ li {
   list-style: none;
 }
 
-.weather-app {
-  border: 1px solid #dadde1;
-  padding: 25px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
-.weather-icon {
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
+.weather-app {
+  background-color: #fff;
+  border: 2px solid #4fdbee;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
 }
 
 .temperature {
@@ -47,7 +51,7 @@ li {
 
 .units {
   position: relative;
-  top: -96px;
+  top: -90px;
   left: 70px;
 }
 
@@ -58,13 +62,19 @@ li {
 .temperature {
   position: relative;
   left: 70px;
-  bottom: 65px;
+  bottom: 58px;
+}
+
+.logo {
+  position: relative;
+  left: -5px;
+  bottom: -5px;
 }
 
 #additional-info {
   position: relative;
   left: 230px;
-  bottom: 125px;
+  bottom: 115px;
 }
 
 #search-button {

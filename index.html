@@ -19,54 +19,63 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <form action="" class="search-form">
+        <form action="" id="search-form" class="search-form">
           <div class="row">
             <div class="col-9">
-              <input type="search" placeholder="Type a city" autofocus="on"
-              autocomplete="off" class="form-control"
+              <input type="search" id="search-form-input" placeholder="Type a city" autofocus="on" autocomplete="off" class="form-control"
             </div>
             <div class="col-3">
               <input type="submit" value="Search" class="form-control btn
               btn-primary shadow-sm" id="search-button"
             </div>
           </div>
-        </form>
-        <h1>Amsterdam, Netherlands</h1>
-        <ul>
-          <li>
-            Wednesday 17:05
-          </li>
-          <li>
-            Sunny day
-          </li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img src="images/sun.png" alt="sun" class="logo" />
-              <div class="float-left">
-                <span class="temperature">19</span>
-                <span class="units">°C </span>
+          <div class="container">
+          </form>
+          <h1 id="city-display">Amsterdam, Netherlands</h1>
+          <ul>
+            <li id="day-time">
+              Wednesday 17:05
+            </li>
+            <li>
+              Sunny day
+            </li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img src="images/sun.png" alt="sun" class="logo" />
+                <div class="float-left">
+                  <span class="temperature" id="temperature">19</span>
+                  <span class="units">
+                    <a href="#" id="celsius-link" data-ol-has-click-handler>°C</a>
+                    |
+                    <a href="#" id="farenheit-link" data-ol-has-click-handler
+                    >°F</a
+                    >
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-6" id="additional-info">
-              <ul>
-                <li>
-                  Precipitation:10%
-                </li>
-                <li>
-                  Humidity:60%
-                </li>
-                <li>
-                  Wind:10km/h
-                </li>
-              </ul>
+              <div class="col-6" id="additional-info">
+                <ul>
+                  <li>
+                    Precipitation:10%
+                  </li>
+                  <li>
+                    Humidity:60%
+                  </li>
+                  <li>
+                    Wind:10km/h
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    
+    <video src="images/sky.mp4" autoplay muted loop id="myVideo" type="video/mp4"></video>
     <script src="src/index.js"></script>
   </body>
-</html>
+  </html>
+  
