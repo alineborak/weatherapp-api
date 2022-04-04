@@ -8,8 +8,7 @@
       crossorigin="anonymous"
     />
     <script
-      src="https://kit.fontawesome.com/4a50478382.js"
-      crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
     ></script>
     <title>WeatherApp</title>
     <meta charset="UTF-8" />
@@ -21,17 +20,19 @@
       <div class="weather-app">
         <form action="" id="search-form" class="search-form">
           <div class="row">
-            <div class="col-9">
-              <input type="search" id="search-form-input" placeholder="Type a city" autofocus="on" autocomplete="off" class="form-control"
+            <div class="col-8">
+              <input type="search" id="search-form-input" placeholder="Type a city" autofocus="on" autocomplete="off" class="form-control"/>
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <input type="submit" value="Search" class="form-control btn
-              btn-primary shadow-sm" id="search-button"
+              btn-primary shadow-sm" id="search-button"/>
+            </div>
+            <div class="col-2">
+              <input type="button" value="Current" class="btn btn-success" id="current-location-button"/>
             </div>
           </div>
-          <div class="container">
-          </form>
-          <h1 id="city-display">Amsterdam, Netherlands</h1>
+        </form>
+          <h1 id="city-display"></h1>
           <ul>
             <li id="day-time">
               Wednesday 17:05
@@ -57,14 +58,14 @@
               </div>
               <div class="col-6" id="additional-info">
                 <ul>
-                  <li>
+                  <li id="precipitation">
                     Precipitation:10%
                   </li>
                   <li>
-                    Humidity:60%
+                    Humidity: 60%
                   </li>
                   <li>
-                    Wind:10km/h
+                    Wind: 10km/h
                   </li>
                 </ul>
               </div>

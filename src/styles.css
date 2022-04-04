@@ -33,13 +33,19 @@ li {
   z-index: -1;
 }
 
+#city-display {
+  color: rgb(81, 151, 212);
+}
+
 .weather-app {
   background-color: #fff;
   border: 2px solid #4fdbee;
   box-sizing: border-box;
   padding: 20px;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
 .temperature {
@@ -47,6 +53,10 @@ li {
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
+}
+
+.units a {
+  text-decoration: none;
 }
 
 .units {
@@ -57,6 +67,11 @@ li {
 
 .search-form {
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#search-form-input {
+  margin-bottom: 40px;
 }
 
 .temperature {
@@ -75,10 +90,4 @@ li {
   position: relative;
   left: 230px;
   bottom: 115px;
-}
-
-#search-button {
-  position: relative;
-  left: 440px;
-  bottom: 38px;
 }
