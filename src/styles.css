@@ -24,6 +24,27 @@ li {
   list-style: none;
 }
 
+p {
+  color: #033772;
+  font-size: 13px;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+}
+
+#city-display {
+  color: rgb(81, 151, 212);
+}
+
+#day-time {
+  font-size: 18px;
+}
+
+#day-feel {
+  font-size: 16px;
+  color: #0a7b83;
+  margin-bottom: 10px;
+}
+
 #myVideo {
   position: fixed;
   right: 0;
@@ -31,10 +52,6 @@ li {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
-}
-
-#city-display {
-  color: rgb(81, 151, 212);
 }
 
 .weather-app {
@@ -66,7 +83,7 @@ li {
 }
 
 .search-form {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 20px;
 }
 

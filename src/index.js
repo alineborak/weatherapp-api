@@ -1,19 +1,23 @@
+// Week 5 - Final Assignment
 let apiKey = "384781b633046620eaed677419a0ac6e";
 
+// 1st function: Getting the temperature and making sure it is displayed in an element
 function showTemperature(response) {
-  // console.log(response.data.name);
-  let temp = Math.round(response.data.main.temp);
-  let temperatureResult = document.querySelector("#temperature");
-  temperatureResult.innerHTML = `${temp}`;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
 
-  let cityResult = document.querySelector("#city-display");
-  cityResult.innerHTML = response.data.name;
+  document.querySelector("#city-display").innerHTML = response.data.name;
 
-  let precipitation = document.querySelector("#precipitation");
-  console.log(response.data);
-  // precipitation.innerHTML =
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+
+  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+
+  document.querySelector("#day-feel").innerHTML = response.data.weather[0].main;
+  console.log(response.data.weather[0].main);
 }
 
+// 2nd function: Getting whatever is typed on the search box and returning the function with api result
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
@@ -24,6 +28,7 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
+// 3rd function: Getting my current location + Returning the temp results from 1st function (with the click)
 function currentTemp(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(function (position) {
@@ -40,8 +45,9 @@ function currentTemp(event) {
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", currentTemp);
 
-// Celsius/Farenheit
+// ---------------------------------------------------------------------- week5
 
+// Celsius/Farenheit - Still need to improve this
 function changeFarenheit(event) {
   event.preventDefault();
   let farenheit = document.querySelector("#temperature");
@@ -58,7 +64,8 @@ let celsiusTemp = document.querySelector("#celsius-link");
 
 farenheitTemp.addEventListener(`click`, changeFarenheit);
 celsiusTemp.addEventListener(`click`, changeCelsius);
-// ------------------------------------------
+
+// Mock Data (From week 3)
 let now = new Date();
 console.log(now.getDate());
 

@@ -13,7 +13,12 @@
     <title>WeatherApp</title>
     <meta charset="UTF-8" />
     <link href="src/styles.css" rel="stylesheet" type="text/css" />
-  </head>
+    <script src="https://kit.fontawesome.com/4a50478382.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Grape+Nuts&display=swap" rel="stylesheet">
+
+</head>
 
   <body>
     <div class="container">
@@ -21,7 +26,7 @@
         <form action="" id="search-form" class="search-form">
           <div class="row">
             <div class="col-8">
-              <input type="search" id="search-form-input" placeholder="Type a city" autofocus="on" autocomplete="off" class="form-control"/>
+              <input type="search" id="search-form-input" placeholder="Enter a city and find your temperature :)" autofocus="on" autocomplete="off" class="form-control"/>
             </div>
             <div class="col-2">
               <input type="submit" value="Search" class="form-control btn
@@ -37,7 +42,7 @@
             <li id="day-time">
               Wednesday 17:05
             </li>
-            <li>
+            <li id="day-feel">
               Sunny day
             </li>
           </ul>
@@ -46,7 +51,7 @@
               <div class="clearfix">
                 <img src="images/sun.png" alt="sun" class="logo" />
                 <div class="float-left">
-                  <span class="temperature" id="temperature">19</span>
+                  <span class="temperature" id="temperature">?</span>
                   <span class="units">
                     <a href="#" id="celsius-link" data-ol-has-click-handler>°C</a>
                     |
@@ -58,19 +63,18 @@
               </div>
               <div class="col-6" id="additional-info">
                 <ul>
-                  <li id="precipitation">
-                    Precipitation:10%
+                  <li>
+                    Humidity: <span id="humidity">%</span>
                   </li>
                   <li>
-                    Humidity: 60%
-                  </li>
-                  <li>
-                    Wind: 10km/h
+                    Wind: <span id="wind"></span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+          <p>"May the force be with you" ~1977</p>
+          <i class="fa-brands fa-cloudversify"></i>
         </div>
       </div>
     </div>

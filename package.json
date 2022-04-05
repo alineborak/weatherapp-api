@@ -1,7 +1,7 @@
 {
-  "name": "javascript-arrays-vs-objects-challenge",
+  "name": "weatherapp-api-week5",
   "version": "1.0.0",
-  "description": "",
+  "description": "On this week we're starting to get data from an an api, in order to get our weather forecast.",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
